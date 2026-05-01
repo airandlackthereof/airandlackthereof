@@ -1,0 +1,32 @@
+{{ partial "header.html" . }}
+
+<article>
+  <h1>Air & Lack Thereof</h1>
+  <p class="subtitle">Notes on Anesthesiology, Pathophysiology, and Pharmacology</p>
+  <ul>
+    {{ range .Pages }}
+      <li>{{ .Date | time.Format "January 2006" }} <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+
+  <section>
+    <h2>About</h2>
+
+    <p>
+      Notes by a resident in anesthesiology.
+      An RSS feed can be found <a href="{{ .Permalink }}">here</a>, a Bluesky feed <a href="https://bsky.app/profile/airandlackthereof.com">@airandlackthereof.com</a>
+    </p>
+
+    <p>
+      Contact<label for="sn-contact" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-contact" class="margin-toggle"/><span class="sidenote">Comments, corrections, feedback welcome!</span>: Michael Schubert – mail@airandlackthereof.com
+    </p>
+
+    <p>
+      Inspired by <a href="https://derangedphysiology.com/main/about-deranged-physiology">Deranged Physiology</a>. Built with <a href="https://edwardtufte.github.io/tufte-css/">Tufte CSS</a> and open source software. License of original content: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+    </p>
+
+    <p>This website does not constitute medical or clinical advice.</p>
+  </section>
+</article>
+
+{{ partial "footer.html" . }}

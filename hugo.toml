@@ -1,0 +1,7 @@
+baseURL = 'https://airandlackthereof.com/'
+languageCode = 'en-us'
+title = 'Air & Lack Thereof'
+author = 'Michael Schubert'
+
+[markup.goldmark.renderer]
+  unsafe = true

@@ -1,0 +1,30 @@
+<!doctype html>
+<html {{with .Site.Language.Locale}}lang="{{.}}"{{end}}>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {{ hugo.Generator }}
+
+  {{ if $.Site.Params.Author }}
+  <meta name="author" content="{{ $.Site.Params.Author }}">
+  {{ end }}
+
+  {{ if .IsHome }}
+  <title>{{ .Site.Title }}</title>
+  {{ else }}
+  <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+  {{ end }}
+
+  <link rel="stylesheet" href="/tufte.min.css"/>
+
+  {{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  {{ end }}
+</head>
+<body>
+
+{{ if not .IsHome }}
+<p><a href="{{ .Site.Home.Permalink }}">&larr; Home</a></p>
+{{ end }}
