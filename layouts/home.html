@@ -14,7 +14,7 @@
 
     <p>
       Notes by a resident in anesthesiology.
-      An RSS feed can be found <a href="{{ .Permalink }}">here</a>, a Bluesky feed <a href="https://bsky.app/profile/airandlackthereof.com">@airandlackthereof.com</a>
+      An RSS feed can be found <a href="{{ with .OutputFormats.Get "RSS" }}{{ .Permalink }}{{ end }}">here</a>, a Bluesky feed <a href="https://bsky.app/profile/airandlackthereof.com">@airandlackthereof.com</a>
     </p>
 
     <p>
